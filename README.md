@@ -12,10 +12,10 @@ built for the following setup:
 
   1. `APP_NAME`: The name of your application which is defined in distillery.
   2. `S3_BUCKET`: The S3 bucket where your releases are stored.
-  3. `RELEASE_TAR`: The full path of your release tar e.g. `emailer/emailer-prod-0.1.6+ref-gbdfa6a9.tar.gz`
+  3. `RELEASE_TAR_PATH`: The full path of your release tar e.g. `emailer/emailer-prod-0.1.6+ref-gbdfa6a9.tar.gz`
 
 ## Deployment Flow
   1. Build a distillery release inside a `bitwalker/alpine-elixir` image e.g. `rel/builds/emailer-prod-0.1.6+ref-gbdfa6a9.tar.gz`
   2. Copy it to S3: `aws s3 cp "rel/builds/emailer-prod-0.1.6+ref-gbdfa6a9.tar.gz" "s3://deployments/emailer/"`
-  3. Register a task definition with the updated `RELEASE_TAR`. TODO
+  3. Register a task definition with the updated `RELEASE_TAR_PATH`. TODO
   4. Update your service to use this new task definition.
