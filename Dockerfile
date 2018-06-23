@@ -13,4 +13,5 @@ COPY ./bootstrap.sh /usr/local/bin
 
 USER default
 
-CMD ["/usr/local/bin/boostrap.sh"]
+CMD ["/bin/bash", "-l", "/usr/local/bin/bootstrap.sh"]
+

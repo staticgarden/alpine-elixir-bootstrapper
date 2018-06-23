@@ -7,7 +7,7 @@
 
 echo "# downloading release: ${APP_NAME}/${RELEASE_TAR}"
 aws s3 cp \
-  "s3://${S3_BUCKET}/${APP_NAME}/${RELEASE_TAR}" \
+  "s3://${S3_BUCKET}/${RELEASE_TAR}" \
   /tmp/
 
 echo "# unzipping the release"
