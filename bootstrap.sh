@@ -5,6 +5,8 @@
 #   2. unzipping it
 #   3. running it
 
+sleep 1d
+
 RELEASE_TAR_FILENAME="$(basename "$RELEASE_TAR_PATH")"
 S3_PATH="s3://${S3_BUCKET}/${RELEASE_TAR_PATH}"
 
